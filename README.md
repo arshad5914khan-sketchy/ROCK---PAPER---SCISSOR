@@ -1,95 +1,19 @@
-import random
+Rock-Paper-Scissors Game
+INTRODUCTION
+This is a simple command-line game where a user plays Rock-Paper-Scissors against the computer. It is a beginner-level Python project designed to understand how computers make random choices and how to handle conditional logic in programming.
 
-rock = '''
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-'''
+ABOUT CODE
+The project is built using Python.
 
-paper = '''
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________)
-'''
+Library: I used the random module, specifically the randint function, to let the computer pick a number (1, 2, or 3) representing Rock, Paper, or Scissors.
 
-scissors = '''
-    _______
----'   ____)____
-          ______)
-       __________)
-      (____)
----.__(___)
-'''
+Logic: The decision-making is done using multiple nested if-statements.
 
-rock_paper_scisscors = int(input("What is your choice? 0 (Rock), 1 (Paper), 2 (Scissors): "))
-random_choice = random.randint(0, 2)
+First, the code checks what the player chose.
 
-# Draws
-if rock_paper_scisscors == 0:
-    if random_choice == 0:
-        print(f"your choice {rock}")
-        print(f"computer choice {rock}")
-        print("computer choice:ROCK(0)")
-        print("Draw")
-if rock_paper_scisscors == 1:
-    if random_choice == 1:
-        print(f"your choice {paper}")
-        print(f"computer choice {paper}")
-        print("computer choice:PAPER(1)")
-        print("Draw")
-if rock_paper_scisscors == 2:
-    if random_choice == 2:
-        print(f"your choice {scissors}")
-        print(f"computer choice {scissors}")
-        print("computer choice:SCISSCORS(2)")
-        print("Draw")
+Inside that check, it compares the player's choice against the computer's random choice to decide the winner.
 
-# Outcomes
-if rock_paper_scisscors == 1:
-    if random_choice == 0:
-        print(f"your choice {paper}")
-        print(f"computer choice {rock}")
-        print("computer choice:ROCK(0)")
-        print("You win")
-        print("paper beats rock")
-if rock_paper_scisscors == 2:
-    if random_choice == 0:
-        print(f"your choice {scissors}")
-        print(f"computer choice {rock}")
-        print("computer choice:ROCK(0)")
-        print("You lose")
-        print("rock beats scisscors")
-if rock_paper_scisscors == 0:
-    if random_choice == 1:
-        print(f"your choice {rock}")
-        print(f"computer choice {paper}")
-        print("computer choice:PAPER(1)")
-        print("You lose")
-        print("paper beats rock")
-if rock_paper_scisscors == 2:
-    if random_choice == 1:
-        print(f"your choice {scissors}")
-        print(f"computer choice {paper}")
-        print("computer choice:PAPER(1)")
-        print("You win")
-        print("scisscors beat paper")
-if rock_paper_scisscors == 0:
-    if random_choice == 2:
-        print(f"your choice {rock}")
-        print(f"computer choice {scissors}")
-        print("computer choice:SCISSCORS(2)")
-        print("You win")
-        print("rock beats scisscors")
-if rock_paper_scisscors == 1:
-    if random_choice == 2:
-        print(f"your choice {paper}")
-        print(f"computer choice {scissors}")
-        print("computer choice:SCISSCORS(2)")
-        print("You lose")
-        print("scisscors beat paper")
+Input Handling: The program takes raw input from the user (string) and compares it against the generated integer logic.
+
+OUTCOME
+When the program runs, it asks the user for input, displays what the computer chose, and prints the result.
